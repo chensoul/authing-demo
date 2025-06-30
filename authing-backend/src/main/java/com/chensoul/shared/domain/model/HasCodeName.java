@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
-public interface HasVersion {
-
-    Long getVersion();
-
-    default void setVersion(Long version) {
-    }
+/**
+ * 标记接口
+ *
+ * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
+ * @since 0.0.1
+ */
+public interface HasCodeName extends HasCode, HasName {
 }

@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
-import javax.validation.constraints.NotNull;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.function.Consumer;
@@ -32,7 +32,6 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 /**
- * @param <I>
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
 @Data

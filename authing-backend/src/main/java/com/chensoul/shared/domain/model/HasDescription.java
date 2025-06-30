@@ -13,22 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
-
-import java.io.Serializable;
+package com.chensoul.shared.domain.model;
 
 /**
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
-public interface HasGeo extends Serializable {
+public interface HasDescription {
 
-    /**
-     * 纬度
-     */
-    Integer getLatitude();
-
-    /**
-     * 经度
-     */
-    Integer getLongitude();
+    String getDescription();
 }

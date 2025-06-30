@@ -1,4 +1,4 @@
-package com.chensoul.authing.shared.domain.service;
+package com.chensoul.shared.domain.service;
 
 import lombok.Getter;
 import org.apache.commons.lang3.StringUtils;

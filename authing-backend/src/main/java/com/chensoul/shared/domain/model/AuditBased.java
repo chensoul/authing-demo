@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,8 +23,6 @@ import lombok.EqualsAndHashCode;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import static com.chensoul.rose.core.util.date.DatePattern.NORM_DATETIME_PATTERN;
-
 /**
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
@@ -32,6 +30,7 @@ import static com.chensoul.rose.core.util.date.DatePattern.NORM_DATETIME_PATTERN
 @Data
 public abstract class AuditBased extends IdBased implements Serializable, HasId {
     protected static final ObjectMapper mapper = new ObjectMapper();
+    private static final String NORM_DATETIME_PATTERN = "";
 
     @JsonFormat(pattern = NORM_DATETIME_PATTERN)
     protected LocalDateTime createTime;

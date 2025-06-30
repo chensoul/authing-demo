@@ -13,14 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Data;
 
 /**
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
-public interface HasEmail extends HasName {
+@Data
+public class EntityInfo implements HasId, HasName {
+    private final String id;
+    private final String name;
 
-    String EMAIL_REGEXP = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$";
-
-    String getEmail();
+    @JsonCreator
+    public EntityInfo(@JsonProperty("id") String id, @JsonProperty("name") String name) {
+        this.id = id;
+        this.name = name;
+    }
 }

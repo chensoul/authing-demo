@@ -13,14 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
-import com.fasterxml.jackson.databind.JsonNode;
+import java.io.Serializable;
 
 /**
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
-public interface HasExtra {
+public interface HasGeo extends Serializable {
 
-    JsonNode getExtra();
+    /**
+     * 纬度
+     */
+    Integer getLatitude();
+
+    /**
+     * 经度
+     */
+    Integer getLongitude();
 }

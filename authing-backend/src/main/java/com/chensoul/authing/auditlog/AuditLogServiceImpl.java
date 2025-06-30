@@ -1,7 +1,7 @@
 package com.chensoul.authing.auditlog;
 
-import com.chensoul.authing.shared.domain.model.HasName;
-import com.chensoul.authing.shared.domain.service.EntityType;
+import com.chensoul.shared.domain.model.HasName;
+import com.chensoul.shared.domain.service.EntityType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

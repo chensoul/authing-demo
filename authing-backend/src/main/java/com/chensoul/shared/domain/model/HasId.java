@@ -13,16 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.io.Serializable;
 
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
-public abstract class IdBased implements HasId {
+/**
+ * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
+ */
+public interface HasId extends Serializable {
 
-    protected String id;
+    String getId();
 }

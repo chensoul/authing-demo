@@ -13,12 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
+
+import com.fasterxml.jackson.databind.JsonNode;
 
 /**
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
-public interface HasName {
+public interface HasExtra {
 
-    String getName();
+    JsonNode getExtra();
 }

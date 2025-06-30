@@ -1,4 +1,4 @@
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
 import java.io.Serializable;
 import java.util.UUID;

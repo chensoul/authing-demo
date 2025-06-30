@@ -15,7 +15,7 @@
  */
 package com.chensoul.authing.auditlog;
 
-import com.chensoul.authing.shared.domain.model.HasName;
+import com.chensoul.shared.domain.model.HasName;
 
 import java.io.Serializable;
 

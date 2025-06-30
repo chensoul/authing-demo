@@ -16,7 +16,7 @@
 package com.chensoul.authing.auditlog;
 
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.chensoul.authing.shared.domain.service.EntityType;
+import com.chensoul.shared.domain.service.EntityType;
 import com.fasterxml.jackson.databind.JsonNode;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

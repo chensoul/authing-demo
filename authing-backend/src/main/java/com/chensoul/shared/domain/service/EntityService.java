@@ -13,11 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.service;
+package com.chensoul.shared.domain.service;
 
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.chensoul.authing.shared.domain.model.*;
+import com.chensoul.shared.domain.model.*;
 
 import java.io.Serializable;
 import java.util.Optional;

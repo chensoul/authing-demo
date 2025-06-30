@@ -13,12 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
 /**
+ * The interface To dto.
+ *
+ * @param <D> the type parameter
  * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
  */
-public interface HasPhone extends HasName {
+public interface ToData<D> {
 
-    String getPhone();
+    /**
+     * This method convert domain domain object to data transfer object.
+     *
+     * @return the dto object
+     */
+    D toData();
 }

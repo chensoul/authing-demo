@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.chensoul.authing.shared.domain.model;
+package com.chensoul.shared.domain.model;
 
-/**
- * @author <a href="mailto:ichensoul@gmail.com">chensoul</a>
- */
-public interface HasTenantId {
+public interface HasVersion {
 
-    String getTenantId();
+    Long getVersion();
+
+    default void setVersion(Long version) {
+    }
 }

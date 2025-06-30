@@ -15,7 +15,7 @@
  */
 package com.chensoul.authing.auditlog;
 
-import com.chensoul.authing.shared.domain.service.EntityType;
+import com.chensoul.shared.domain.service.EntityType;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
