@@ -1,0 +1,50 @@
+services:
+  authing-mysql:
+    image: mysql:8.0
+    container_name: authing-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: authing
+      MYSQL_USER: authing
+      MYSQL_PASSWORD: authingpass
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    command: --default-authentication-plugin=mysql_native_password
+    networks:
+      - authing-net
+
+  authing-backend:
+    build:
+      context: ./authing-backend
+    container_name: authing-backend
+    restart: always
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://authing-mysql:3306/authing?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: authing
+      SPRING_DATASOURCE_PASSWORD: authingpass
+    ports:
+      - "8080:8080"
+    depends_on:
+      - authing-mysql
+    networks:
+      - authing-net
+
+  authing-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: authing-frontend
+    restart: always
+    ports:
+      - "5173:80"
+    depends_on:
+      - authing-backend
+    networks:
+      - authing-net
+
+networks:
+  authing-net:
+    driver: bridge
