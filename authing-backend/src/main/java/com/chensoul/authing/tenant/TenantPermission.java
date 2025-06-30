@@ -5,7 +5,7 @@ import lombok.Data;
 import java.time.LocalDateTime;
 
 @Data
-public class TenantResource {
+public class TenantPermission {
     private Long id;
 
     private String resourceId;

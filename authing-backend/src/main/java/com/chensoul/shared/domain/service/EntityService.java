@@ -17,7 +17,6 @@ package com.chensoul.shared.domain.service;
 
 
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
-import com.chensoul.authing.shared.domain.model.*;
 import com.chensoul.shared.domain.model.*;
 
 import java.io.Serializable;
